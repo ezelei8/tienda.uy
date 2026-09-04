@@ -16,10 +16,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
-<link rel="stylesheet" href="styles.css?v=20260903">
+<link rel="stylesheet" href="styles.css?v=20260904">
 <style>
 .product-size{font-family:var(--mono);font-size:0.74rem;letter-spacing:0.06em;color:var(--ink-mute);margin:-0.75rem 0 1.15rem}
 .product-size b{color:var(--ink);font-weight:600;letter-spacing:0.02em}
+.is-sold-out .product-media img{filter:grayscale(1);opacity:0.4}
+.is-sold-out .product-body h3,.is-sold-out .price-new{opacity:0.55}
+.badge-sold{background:rgba(255,68,51,0.16)!important;color:var(--accent-red)!important;border-color:rgba(255,68,51,0.4)!important}
+.btn-restock{background:transparent;color:var(--ink-mute);border:1px solid var(--line)}
+.btn-restock:hover{color:var(--ink);border-color:var(--ink-dim)}
+.btn-restock .icon-wa{fill:currentColor}
 </style>
 </head>
 <body>
@@ -384,10 +390,10 @@
           </div>
         </article>
 
-        <article class="product-card" data-tilt-card data-reveal>
+        <article class="product-card is-sold-out" data-tilt-card data-reveal>
           <div class="product-media">
             <img src="assets/img/products/pistola-masajeadora.webp" alt="Pistola masajeadora portátil" loading="lazy">
-            <span class="product-badge">1ª línea</span>
+            <span class="product-badge badge-sold">Agotado</span>
           </div>
           <div class="product-body">
             <p class="product-tag">Bienestar</p>
@@ -395,9 +401,10 @@
             <div class="product-price">
               <span class="price-new">$900</span>
             </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Pistola masajeadora portátil" target="_blank" rel="noopener">
+            <p class="product-size">Sin stock por ahora</p>
+            <a class="btn btn-block btn-restock" href="https://wa.me/59899576240?text=Hola%21%20%F0%9F%91%8B%20%C2%BFCuando%20vuelve%20a%20haber%20stock%20de%20la%20Pistola%20Masajeadora%20Port%C3%A1til%3F" target="_blank" rel="noopener">
               <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
+              Avisame cuando llegue
             </a>
           </div>
         </article>
@@ -430,7 +437,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike Air Force 1 Negro/Gris</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>41/42</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Negro/Gris talle 41/42" target="_blank" rel="noopener">
@@ -449,7 +456,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike SB Dunk Low Blanco</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>41/42</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike SB Dunk Low Blanco talle 41/42" target="_blank" rel="noopener">
@@ -468,7 +475,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike SB Dunk Low Verde</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>41/42</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike SB Dunk Low Verde talle 41/42" target="_blank" rel="noopener">
@@ -487,7 +494,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike Air Force 1 Menta</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>37/38</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Menta talle 37/38" target="_blank" rel="noopener">
@@ -544,7 +551,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike Air Force 1 Azul Marino</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>41/42</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Azul Marino talle 41/42" target="_blank" rel="noopener">
@@ -582,7 +589,7 @@
             <p class="product-tag">Nike</p>
             <h3>Nike Air Force 1 Gris</h3>
             <div class="product-price">
-              <span class="price-new">$2.000</span>
+              <span class="price-new">$2.300</span>
             </div>
             <p class="product-size">Talles <b>41/42</b></p>
             <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Gris talle 41/42" target="_blank" rel="noopener">
@@ -714,7 +721,7 @@
 
 <script defer src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
 <script defer src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script defer src="lib/manifest.js?v=20260903"></script>
-<script defer src="main.js?v=20260903"></script>
+<script defer src="lib/manifest.js?v=20260904"></script>
+<script defer src="main.js?v=20260904"></script>
 </body>
 </html>
