@@ -3,725 +3,485 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TIENDA UY — Accesorios de tecnología en Uruguay</title>
-<meta name="description" content="TIENDA UY: accesorios de tecnología con estilo, calidad y confianza. Auriculares, fundas, cargadores y más. Envíos a todo Uruguay. Precios mayoristas desde 6 unidades. Consultanos por WhatsApp.">
-<meta name="theme-color" content="#0a0a0b">
-
-<link rel="icon" href="assets/img/logo.webp">
-<link rel="apple-touch-icon" href="assets/img/logo.webp">
-
-<link rel="preload" as="image" href="assets/img/logo.webp" fetchpriority="high">
-
+<title>OnlineShop Uy — Perfumes, tecnología y championes en Uruguay</title>
+<meta name="description" content="Perfumes árabes, auriculares, accesorios para celular y championes importados. Precios a la vista y pedidos por WhatsApp. Envíos a todo Uruguay.">
+<meta name="theme-color" content="#080b12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OnlineShop Uy — Happy Shopping">
+<meta property="og:description" content="Perfumes árabes, tecnología y championes. Precios a la vista, pedidos por WhatsApp.">
+<meta property="og:image" content="logo.webp">
+<meta property="og:locale" content="es_UY">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
-
-<link rel="stylesheet" href="styles.css?v=20260904">
-<style>
-.product-size{font-family:var(--mono);font-size:0.74rem;letter-spacing:0.06em;color:var(--ink-mute);margin:-0.75rem 0 1.15rem}
-.product-size b{color:var(--ink);font-weight:600;letter-spacing:0.02em}
-.is-sold-out .product-media img{filter:grayscale(1);opacity:0.4}
-.is-sold-out .product-body h3,.is-sold-out .price-new{opacity:0.55}
-.badge-sold{background:rgba(255,68,51,0.16)!important;color:var(--accent-red)!important;border-color:rgba(255,68,51,0.4)!important}
-.btn-restock{background:transparent;color:var(--ink-mute);border:1px solid var(--line)}
-.btn-restock:hover{color:var(--ink);border-color:var(--ink-dim)}
-.btn-restock .icon-wa{fill:currentColor}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Manrope:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260910">
 </head>
 <body>
-<a class="skip-link" href="#main">Saltar al contenido</a>
 
-<!-- Icon sprite -->
-<svg style="display:none" aria-hidden="true">
-  <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-    <path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38a9.94 9.94 0 0 0 4.79 1.22h.01c5.5 0 10-4.5 10-10s-4.5-9.84-10.01-9.84Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.53 3.7-8.22 8.25-8.22 2.2 0 4.27.86 5.83 2.42a8.16 8.16 0 0 1 2.41 5.81c0 4.53-3.7 8.2-8.25 8.2Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.97-.14.17-.3.19-.55.06-.25-.12-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.3.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08s.9 2.42 1.02 2.58c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/>
-  </symbol>
-  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1"/>
-  </symbol>
-  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/>
-  </symbol>
-  <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M2 7h11v9H2z"/><path d="M13 10h4l3 3v3h-7"/><circle cx="6.5" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/>
-  </symbol>
-  <symbol id="icon-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 2l2.2 1.3 2.6-.2.9 2.4 2.4.9-.2 2.6L21.3 11 20 13.2l.2 2.6-2.4.9-.9 2.4-2.6-.2L12 20.4l-2.2-1.5-2.6.2-.9-2.4-2.4-.9.2-2.6L2.7 11l1.4-2.2-.2-2.6 2.4-.9.9-2.4 2.6.2z"/>
-    <path d="M9 12l2 2 4-4"/>
-  </symbol>
-  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2.5l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7-6.1-3.6-6.1 3.6 1.5-6.7-5.1-4.6 6.8-.7z"/>
-  </symbol>
-</svg>
-
-<!-- Splash -->
-<div class="splash" data-splash aria-hidden="true">
-  <div class="splash-inner">
-    <img class="splash-logo" src="assets/img/logo.webp" alt="" width="74" height="74">
-    <span class="splash-word chrome-text">TIENDA UY</span>
-    <span class="splash-line"></span>
+<div class="intro" aria-hidden="true">
+  <div class="intro-in">
+    <img src="logo-mark.png" alt="" width="496" height="354">
+    <span class="intro-w">OnlineShop <i>Uy</i></span>
   </div>
 </div>
 
-<!-- Nav -->
+<a class="skip" href="#perfumes">Ir al catálogo</a>
+
 <header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="#top">
-      <img class="brand-logo" src="assets/img/logo.webp" alt="TIENDA UY" width="40" height="40">
-      <span class="brand-word chrome-text">TIENDA UY</span>
+  <div class="wrap nav-in">
+    <a class="marca" href="#top">
+      <img src="logo-mark.png" alt="" width="496" height="354">
+      <span><em>OnlineShop <b>Uy</b></em><i>Happy Shopping</i></span>
     </a>
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a class="nav-link" href="#top">Inicio</a>
-      <a class="nav-link" href="#productos">Productos</a>
-      <a class="nav-link" href="#calzado">Calzado</a>
-      <a class="nav-link" href="#mayorista">Mayorista</a>
-      <a class="nav-link" href="#nosotros">Nosotros</a>
-      <a class="nav-link" href="#contacto">Contacto</a>
+    <nav class="nav-l" aria-label="Secciones">
+      <a href="#perfumes">Perfumes</a>
+      <a href="#audio">Audio</a>
+      <a href="#celular">Celular</a>
+      <a href="#calzado">Championes</a>
+      <a href="#otros">Más</a>
     </nav>
-    <div class="nav-actions">
-      <a class="nav-wa-btn" href="https://wa.me/59899576240" data-wa="general" target="_blank" rel="noopener">
-        <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px;fill:currentColor"><use href="#icon-whatsapp"></use></svg>
-        WhatsApp
-      </a>
-      <button class="nav-toggle" data-nav-toggle aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-mobile">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a class="btn btn-oro btn-s" href="#contacto">Escribinos</a>
   </div>
 </header>
 
-<nav class="nav-mobile" id="nav-mobile" data-nav-mobile aria-hidden="true" aria-label="Menú móvil">
-  <a href="#top">Inicio</a>
-  <a href="#productos">Productos</a>
-  <a href="#calzado">Calzado</a>
-  <a href="#mayorista">Mayorista</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#contacto">Contacto</a>
-  <a class="btn btn-wa" href="https://wa.me/59899576240" data-wa="general" target="_blank" rel="noopener">
-    <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-    Escribinos
-  </a>
-</nav>
+<main id="top">
 
-<main id="main">
-
-  <!-- Hero -->
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div class="hero-content" data-reveal>
-        <p class="kicker">Accesorios tech · Uruguay</p>
-        <h1 class="hero-title">
-          <span class="line-sub">Bienvenidos a</span>
-          <span class="chrome-text">TIENDA UY</span>
-        </h1>
-        <p class="hero-tagline">Estilo · Calidad · Confianza</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#productos">Ver productos</a>
-          <a class="btn btn-wa btn-lg" data-magnetic data-magnetic-strength="0.25" href="https://wa.me/59899576240" data-wa="general" target="_blank" rel="noopener">
-            <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-            Hablar por WhatsApp
-          </a>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-t">
+        <p class="eye"><span></span>Uruguay · envíos a todo el país</p>
+        <h1>CALIDAD, PRECIO<br>Y <em>CONFIANZA</em></h1>
+        <p class="lead">Perfumes árabes, tecnología y championes importados. Todo con el precio a la vista, sin tener que preguntar.</p>
+        <div class="cta">
+          <a class="btn btn-oro" href="#perfumes">Ver productos</a>
+          <a class="btn btn-linea" href="#contacto">Hacer un pedido</a>
         </div>
-        <div class="hero-badges">
-          <div class="hero-badge"><svg viewBox="0 0 24 24"><use href="#icon-shield"></use></svg><span>Compra<br>segura</span></div>
-          <div class="hero-badge"><svg viewBox="0 0 24 24"><use href="#icon-truck"></use></svg><span>Envíos a<br>todo Uruguay</span></div>
-          <div class="hero-badge"><svg viewBox="0 0 24 24"><use href="#icon-badge"></use></svg><span>Producto<br>primera línea</span></div>
-        </div>
+        <ul class="ventajas">
+          <li><b>Envíos</b>a todo Uruguay</li>
+          <li><b>Precios</b>siempre a la vista</li>
+          <li><b>Atención</b>personalizada</li>
+        </ul>
       </div>
-      <div class="hero-visual" data-reveal>
-        <div class="hero-visual-inner">
-          <div class="hero-visual-glow" aria-hidden="true"></div>
-          <img src="assets/img/products/airpods-anc.webp" alt="AirPods Pro con cancelación de ruido, producto TIENDA UY" width="360" height="480" fetchpriority="high" loading="eager" decoding="sync">
-          <div class="hero-visual-ring" aria-hidden="true"></div>
-        </div>
+      <div class="hero-f">
+        <img src="logo.webp" alt="OnlineShop Uy" width="700" height="700">
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee">
-    <div class="marquee-track" data-marquee>
-      <span class="marquee-item">Envíos a todo Uruguay</span>
-      <span class="marquee-item">+6 unidades: precio mayorista</span>
-      <span class="marquee-item">Producto primera línea</span>
-      <span class="marquee-item">Consultanos por WhatsApp</span>
-      <span class="marquee-item">Estilo · Calidad · Confianza</span>
+  <div class="tira" aria-hidden="true">
+    <div class="tira-r">
+      <span>PERFUMES ÁRABES ✦ DECANTS DESDE $280 ✦ AUDIO ✦ CHAMPIONES IMPORTADOS ✦ ACCESORIOS ✦ ENVÍOS A TODO URUGUAY ✦&nbsp;</span>
+      <span>PERFUMES ÁRABES ✦ DECANTS DESDE $280 ✦ AUDIO ✦ CHAMPIONES IMPORTADOS ✦ ACCESORIOS ✦ ENVÍOS A TODO URUGUAY ✦&nbsp;</span>
     </div>
   </div>
 
-  <!-- Banner destacado -->
-  <section class="section banner">
-    <div class="container banner-grid">
-      <div data-reveal>
-        <p class="kicker">Colección</p>
-        <h2 class="banner-title chrome-text">Lo mejor en<br>tecnología</h2>
-        <p class="banner-copy">Los accesorios que buscás, al precio que querés. Catálogo en constante renovación, pensado para que siempre encuentres lo que tu celular necesita.</p>
-        <div class="banner-actions">
-          <a class="btn btn-primary btn-lg" href="#productos">Comprar ahora</a>
+  <section class="cats">
+    <div class="wrap">
+      <div class="cat-grid">
+        <a href="#perfumes"><span>Perfumes</span><small>6 fragancias</small></a>
+        <a href="#audio"><span>Audio</span><small>6 productos</small></a>
+        <a href="#celular"><span>Celular</span><small>6 productos</small></a>
+        <a href="#calzado"><span>Championes</span><small>10 pares</small></a>
+        <a href="#otros"><span>Otros</span><small>3 productos</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="perfumes">
+    <div class="wrap">
+      <p class="k">Novedad</p>
+      <h2>Perfumes árabes</h2>
+      <p class="p">Frasco completo o decant para probarlo antes. Los decants son fraccionados nuestros, en vial con atomizador — misma fragancia, precio de entrada mucho más bajo.</p>
+      
+      <div class="grid">
+      <article class="card">
+        <div class="foto"><img src="bharara-king.webp" alt="Bharara King" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Bharara King</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">Amaderado intenso, con salida fresca. De los que dejan estela todo el día.</p>
+          <div class="decants"><span class="dec-lab">Decants</span><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Bharara%20King%0A%0A%E2%80%A2%205%20ml%20%E2%80%94%20%24%20450%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>5 ml</b><span>$ 450</span></a><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Bharara%20King%0A%0A%E2%80%A2%2010%20ml%20%E2%80%94%20%24%20650%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>10 ml</b><span>$ 650</span></a></div>
+          <div class="pie"><span class="precio">$ 3.890</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Bharara%20King%20%E2%80%94%20%24%203.890%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
         </div>
-      </div>
-      <ul class="feature-list" data-reveal>
-        <li class="feature-item">
-          <span class="feature-icon"><svg viewBox="0 0 24 24"><use href="#icon-star"></use></svg></span>
-          <div><h4>Catálogo variado</h4><p>Audio, carga, fundas y más — siempre hay algo nuevo.</p></div>
-        </li>
-        <li class="feature-item">
-          <span class="feature-icon"><svg viewBox="0 0 24 24"><use href="#icon-badge"></use></svg></span>
-          <div><h4>Calidad garantizada</h4><p>Producto primera línea, probado y verificado.</p></div>
-        </li>
-        <li class="feature-item">
-          <span class="feature-icon"><svg viewBox="0 0 24 24"><use href="#icon-truck"></use></svg></span>
-          <div><h4>Envíos rápidos</h4><p>A todo Uruguay, directo a tu puerta.</p></div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Productos -->
-  <section class="section" id="productos">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <p class="kicker">Catálogo</p>
-        <h2 class="section-title chrome-text">Productos</h2>
-        <p class="section-sub">Stock disponible en Uruguay. Fotos reales de cada producto — mismo producto, mismo precio.</p>
-        <p class="catalog-note">
-          <svg viewBox="0 0 24 24"><use href="#icon-badge"></use></svg>
-          ¿Comprás +6 unidades? Accedé a precio mayorista — <a href="#mayorista" style="color:var(--accent-green)">ver más</a>
-        </p>
-      </div>
-
-      <div class="product-grid">
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/airpods-anc.webp" alt="AirPods 4 ANC última generación" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Audio</p>
-            <h3>AirPods 4 ANC</h3>
-            <div class="product-price">
-              <span class="price-new">$1.800</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="AirPods 4 ANC última gen" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/airpods-sin-logo.webp" alt="AirPods" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Audio</p>
-            <h3>AirPods</h3>
-            <div class="product-price">
-              <span class="price-new">$600</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="AirPods" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/pods-pro4.webp" alt="Pods Pro 4" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Audio</p>
-            <h3>Pods Pro 4</h3>
-            <div class="product-price">
-              <span class="price-new">$500</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Pods Pro 4" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/auriculares-tws53.webp" alt="Auriculares TWS 5.3 Bluetooth" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Audio</p>
-            <h3>Auriculares TWS 5.3</h3>
-            <div class="product-price">
-              <span class="price-new">$450</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Auriculares TWS 5.3" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/jbl-tune-760.webp" alt="JBL Tune 760 auriculares inalámbricos" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Audio</p>
-            <h3>JBL Tune 760</h3>
-            <div class="product-price">
-              <span class="price-new">$1.000</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="JBL Tune 760" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/bateria-magsafe.webp" alt="Batería MagSafe Apple" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Carga</p>
-            <h3>Batería MagSafe Apple</h3>
-            <div class="product-price">
-              <span class="price-new">$990</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Batería MagSafe Apple" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/kit-cargador-tipoc.webp" alt="Kit cargador tipo C, 35W USB-C" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Carga</p>
-            <h3>Kit Cargador Tipo C</h3>
-            <div class="product-price">
-              <span class="price-new">$490</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Kit Cargador Tipo C" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/kit-ficha-iphone.webp" alt="Kit ficha iPhone, cargador 20W con cable Lightning" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Carga</p>
-            <h3>Kit Ficha iPhone</h3>
-            <div class="product-price">
-              <span class="price-new">$450</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Kit Ficha iPhone" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/funda-magsafe.webp" alt="Funda MagSafe Apple transparente" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Fundas</p>
-            <h3>Funda MagSafe Apple</h3>
-            <div class="product-price">
-              <span class="price-new">$400</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Funda MagSafe Apple" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/fundas-transparentes.webp" alt="Fundas transparentes Space Collection" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Fundas</p>
-            <h3>Fundas Transparentes</h3>
-            <div class="product-price">
-              <span class="price-new">$300</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Fundas Transparentes" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/combo-fundas-antiespias.webp" alt="Combo funda de silicona más lámina antiespía" loading="lazy">
-            <span class="product-badge">1ª línea</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Fundas</p>
-            <h3>Combo Funda + Antiespía</h3>
-            <div class="product-price">
-              <span class="price-new">$450</span>
-            </div>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Combo funda más antiespía" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card is-sold-out" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/pistola-masajeadora.webp" alt="Pistola masajeadora portátil" loading="lazy">
-            <span class="product-badge badge-sold">Agotado</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Bienestar</p>
-            <h3>Pistola Masajeadora Portátil</h3>
-            <div class="product-price">
-              <span class="price-new">$900</span>
-            </div>
-            <p class="product-size">Sin stock por ahora</p>
-            <a class="btn btn-block btn-restock" href="https://wa.me/59899576240?text=Hola%21%20%F0%9F%91%8B%20%C2%BFCuando%20vuelve%20a%20haber%20stock%20de%20la%20Pistola%20Masajeadora%20Port%C3%A1til%3F" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Avisame cuando llegue
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Calzado -->
-  <section class="section" id="calzado">
-    <div class="container">
-      <div class="section-head" data-reveal>
-        <p class="kicker">Nuevo ingreso</p>
-        <h2 class="section-title chrome-text">Calzado</h2>
-        <p class="section-sub">Zapatillas Nike y Adidas recién llegadas. Stock limitado por talle — consultanos antes de comprar.</p>
-        <p class="catalog-note">
-          <svg viewBox="0 0 24 24"><use href="#icon-badge"></use></svg>
-          ¿Comprás +6 unidades? Accedé a precio mayorista — <a href="#mayorista" style="color:var(--accent-green)">ver más</a>
-        </p>
-      </div>
-
-      <div class="product-grid">
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/af1-negro-gris.webp" alt="Nike Air Force 1 negro, blanco y gris" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike Air Force 1 Negro/Gris</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Negro/Gris talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/dunk-low-blanco.webp" alt="Nike SB Dunk Low blanco total" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike SB Dunk Low Blanco</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike SB Dunk Low Blanco talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/dunk-low-verde.webp" alt="Nike SB Dunk Low blanco, gris y negro con detalles verdes" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike SB Dunk Low Verde</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike SB Dunk Low Verde talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/af1-menta.webp" alt="Nike Air Force 1 verde menta" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike Air Force 1 Menta</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>37/38</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Menta talle 37/38" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/sb-charge-beige.webp" alt="Nike SB Charge de lona beige" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike SB Charge Beige</h3>
-            <div class="product-price">
-              <span class="price-new">$2.000</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike SB Charge Beige talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/adidas-runner-blanco.webp" alt="Zapatillas Adidas running blancas con rayas negras" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Adidas</p>
-            <h3>Adidas Running Blanco</h3>
-            <div class="product-price">
-              <span class="price-new">$2.000</span>
-            </div>
-            <p class="product-size">Talles <b>42/43</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Adidas Running Blanco talle 42/43" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/af1-azul-marino.webp" alt="Nike Air Force 1 blanco con logo azul marino" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike Air Force 1 Azul Marino</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Azul Marino talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/nike-running-negro.webp" alt="Zapatillas Nike running negras" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike Running Negro</h3>
-            <div class="product-price">
-              <span class="price-new">$2.000</span>
-            </div>
-            <p class="product-size">Talles <b>40/41</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Running Negro talle 40/41" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/af1-gris.webp" alt="Nike Air Force 1 gris total" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Nike</p>
-            <h3>Nike Air Force 1 Gris</h3>
-            <div class="product-price">
-              <span class="price-new">$2.300</span>
-            </div>
-            <p class="product-size">Talles <b>41/42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Nike Air Force 1 Gris talle 41/42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card" data-tilt-card data-reveal>
-          <div class="product-media">
-            <img src="assets/img/products/adidas-forum-marron.webp" alt="Adidas Forum Low de gamuza marrón" loading="lazy">
-            <span class="product-badge">Nuevo</span>
-          </div>
-          <div class="product-body">
-            <p class="product-tag">Adidas</p>
-            <h3>Adidas Forum Low Marrón</h3>
-            <div class="product-price">
-              <span class="price-new">$2.000</span>
-            </div>
-            <p class="product-size">Talles <b>42</b></p>
-            <a class="btn btn-wa btn-block" href="https://wa.me/59899576240" data-wa="product" data-wa-name="Adidas Forum Low Marrón talle 42" target="_blank" rel="noopener">
-              <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              Terminar la compra
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Mayorista -->
-  <section class="section wholesale" id="mayorista">
-    <div class="container">
-      <div class="wholesale-panel" data-reveal>
-        <div>
-          <span class="wholesale-badge">Sector mayorista</span>
-          <h2 class="wholesale-title chrome-text">Emprendé con<br>nosotros</h2>
-          <p class="wholesale-copy">Comprando <strong style="color:var(--ink)">+6 unidades</strong> accedés a precios mayoristas. Ideal para emprendedores, revendedores y locales que buscan surtido de calidad a precio especial.</p>
-          <ul class="wholesale-list">
-            <li><svg viewBox="0 0 24 24"><use href="#icon-badge"></use></svg>Precios especiales desde 6 unidades</li>
-            <li><svg viewBox="0 0 24 24"><use href="#icon-shield"></use></svg>Atención personalizada para tu emprendimiento</li>
-            <li><svg viewBox="0 0 24 24"><use href="#icon-truck"></use></svg>Stock disponible todo el año</li>
-          </ul>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="9am-dive.webp" alt="Afnan 9AM Dive" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Afnan 9AM Dive</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">Acuático y fresco. Ideal para el día, la oficina y el calor.</p>
+          <div class="decants"><span class="dec-lab">Decants</span><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Afnan%209AM%20Dive%0A%0A%E2%80%A2%205%20ml%20%E2%80%94%20%24%20280%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>5 ml</b><span>$ 280</span></a><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Afnan%209AM%20Dive%0A%0A%E2%80%A2%2010%20ml%20%E2%80%94%20%24%20500%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>10 ml</b><span>$ 500</span></a></div>
+          <div class="pie"><span class="precio">$ 2.890</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Afnan%209AM%20Dive%20%E2%80%94%20%24%202.890%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
         </div>
-        <div class="wholesale-actions">
-          <a class="btn btn-wa btn-lg btn-block" data-magnetic data-magnetic-strength="0.2" href="https://wa.me/59899576240" data-wa="wholesale" target="_blank" rel="noopener">
-            <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-            Quiero precios mayoristas
-          </a>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="odyssey-aqua.webp" alt="Armaf Odyssey Aqua" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Armaf Odyssey Aqua</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">Cítrico y verde, muy limpio. El más versátil de todos.</p>
+          <div class="decants"><span class="dec-lab">Decants</span><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Armaf%20Odyssey%20Aqua%0A%0A%E2%80%A2%205%20ml%20%E2%80%94%20%24%20280%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>5 ml</b><span>$ 280</span></a><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Armaf%20Odyssey%20Aqua%0A%0A%E2%80%A2%2010%20ml%20%E2%80%94%20%24%20500%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>10 ml</b><span>$ 500</span></a></div>
+          <div class="pie"><span class="precio">$ 2.890</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Armaf%20Odyssey%20Aqua%20%E2%80%94%20%24%202.890%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
         </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="fakhar.webp" alt="Lattafa Fakhar" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Lattafa Fakhar</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">Dulce y elegante, con fondo de vainilla. Rinde muchísimo.</p>
+          <div class="decants"><span class="dec-lab">Decants</span><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Lattafa%20Fakhar%0A%0A%E2%80%A2%205%20ml%20%E2%80%94%20%24%20280%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>5 ml</b><span>$ 280</span></a><a class="dec" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20un%20decant%20de%20Lattafa%20Fakhar%0A%0A%E2%80%A2%2010%20ml%20%E2%80%94%20%24%20500%0A%0A%C2%BFTen%C3%A9s%20disponible%3F" target="_blank" rel="noopener"><b>10 ml</b><span>$ 500</span></a></div>
+          <div class="pie"><span class="precio">$ 2.500</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Lattafa%20Fakhar%20%E2%80%94%20%24%202.500%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card agotado">
+        <div class="foto"><span class="badge sin">Agotado</span><img src="amber-oud.webp" alt="Al Haramain Amber Oud Gold Edition" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Al Haramain Amber Oud Gold Edition</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">El clásico del ámbar y el oud. Uno de los más buscados del mundo árabe.</p>
+          
+          <div class="pie"><span class="precio">$ 3.890</span><a class="btn btn-ghost" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20reservar%20una%20unidad%20de%3A%20Al%20Haramain%20Amber%20Oud%20Gold%20Edition" target="_blank" rel="noopener">Reservar una unidad</a></div>
+        </div>
+      </article>
+      <article class="card agotado">
+        <div class="foto"><span class="badge sin">Agotado</span><img src="the-kingdom.webp" alt="Lattafa The Kingdom" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Lattafa The Kingdom</h3>
+          <p class="meta">100 ml · Eau de Parfum</p>
+          <p class="desc">Dulce, especiado y muy potente. Presencia de sobra.</p>
+          
+          <div class="pie"><span class="precio">$ 2.890</span><a class="btn btn-ghost" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20reservar%20una%20unidad%20de%3A%20Lattafa%20The%20Kingdom" target="_blank" rel="noopener">Reservar una unidad</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="audio">
+    <div class="wrap">
+      <p class="k">Audio</p>
+      <h2>Auriculares y parlantes</h2>
+      <p class="p">Desde el par de entrada hasta cancelación de ruido activa. Todos con garantía de funcionamiento.</p>
+      
+      <div class="grid">
+      <article class="card">
+        <div class="foto chica"><img src="airpods-anc.webp" alt="AirPods 4 ANC" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>AirPods 4 ANC</h3>
+          
+          <p class="desc">Cancelación de ruido activa y estuche de carga.</p>
+          
+          <div class="pie"><span class="precio">$ 1.800</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20AirPods%204%20ANC%20%E2%80%94%20%24%201.800%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="jbl-go4.webp" alt="JBL Go4 Pro" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>JBL Go4 Pro</h3>
+          <p class="meta">Negro</p>
+          <p class="desc">Parlante portátil, resistente al agua. Suena mucho más de lo que mide.</p>
+          
+          <div class="pie"><span class="precio">$ 850</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20JBL%20Go4%20Pro%20%E2%80%94%20%24%20850%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="airpods-sin-logo.webp" alt="AirPods" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>AirPods</h3>
+          
+          <p class="desc">El precio de entrada más bajo en auriculares inalámbricos.</p>
+          
+          <div class="pie"><span class="precio">$ 600</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20AirPods%20%E2%80%94%20%24%20600%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="pods-pro4.webp" alt="Pods Pro 4" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Pods Pro 4</h3>
+          
+          <p class="desc">Inalámbricos con estuche. Batería para todo el día.</p>
+          
+          <div class="pie"><span class="precio">$ 500</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Pods%20Pro%204%20%E2%80%94%20%24%20500%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="auriculares-tws53.webp" alt="Auriculares TWS 5.3" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Auriculares TWS 5.3</h3>
+          
+          <p class="desc">Bluetooth 5.3, conexión estable y liviana.</p>
+          
+          <div class="pie"><span class="precio">$ 450</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Auriculares%20TWS%205.3%20%E2%80%94%20%24%20450%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card agotado">
+        <div class="foto chica"><span class="badge sin">Agotado</span><img src="jbl-tune-760.webp" alt="JBL Tune 760" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>JBL Tune 760</h3>
+          
+          <p class="desc">De vincha, con cancelación de ruido.</p>
+          
+          <div class="pie"><span class="precio">$ 1.000</span><a class="btn btn-ghost" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Quiero%20reservar%20una%20unidad%20de%3A%20JBL%20Tune%20760" target="_blank" rel="noopener">Reservar una unidad</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="celular">
+    <div class="wrap">
+      <p class="k">Tu celular</p>
+      <h2>Carga, fundas y accesorios</h2>
+      <p class="p">Lo que se usa todos los días y siempre falta. Decinos qué modelo tenés y te decimos qué te sirve.</p>
+      
+      <div class="grid">
+      <article class="card">
+        <div class="foto chica"><img src="bateria-magsafe.webp" alt="Batería MagSafe Apple" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Batería MagSafe Apple</h3>
+          
+          <p class="desc">Se pega atrás del iPhone y carga sin cables.</p>
+          
+          <div class="pie"><span class="precio">$ 990</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Bater%C3%ADa%20MagSafe%20Apple%20%E2%80%94%20%24%20990%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="kit-cargador-tipoc.webp" alt="Kit Cargador Tipo C" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Kit Cargador Tipo C</h3>
+          
+          <p class="desc">Cargador con cable tipo C. Carga rápida.</p>
+          
+          <div class="pie"><span class="precio">$ 490</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Kit%20Cargador%20Tipo%20C%20%E2%80%94%20%24%20490%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="kit-ficha-iphone.webp" alt="Kit Ficha iPhone" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Kit Ficha iPhone</h3>
+          
+          <p class="desc">Ficha y cable para iPhone, listo para usar.</p>
+          
+          <div class="pie"><span class="precio">$ 450</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Kit%20Ficha%20iPhone%20%E2%80%94%20%24%20450%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><span class="badge hay">Lo más pedido</span><img src="combo-fundas-antiespias.webp" alt="Combo Funda + Antiespía" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Combo Funda + Antiespía</h3>
+          
+          <p class="desc">Protegés la pantalla y el celular por un solo precio.</p>
+          
+          <div class="pie"><span class="precio">$ 450</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Combo%20Funda%20%2B%20Antiesp%C3%ADa%20%E2%80%94%20%24%20450%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="funda-magsafe.webp" alt="Funda MagSafe Apple" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Funda MagSafe Apple</h3>
+          
+          <p class="desc">Compatible con carga magnética.</p>
+          
+          <div class="pie"><span class="precio">$ 400</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Funda%20MagSafe%20Apple%20%E2%80%94%20%24%20400%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto chica"><img src="fundas-transparentes.webp" alt="Fundas Transparentes" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Fundas Transparentes</h3>
+          
+          <p class="desc">Transparente, fina y resistente.</p>
+          
+          <div class="pie"><span class="precio">$ 300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Fundas%20Transparentes%20%E2%80%94%20%24%20300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="calzado">
+    <div class="wrap">
+      <p class="k">Calzado</p>
+      <h2>Championes importados</h2>
+      <p class="p">Pares únicos: del talle que ves, hay uno. Cuando se va, se fue.</p>
+      
+      <div class="grid">
+      <article class="card">
+        <div class="foto"><img src="af1-negro-gris.webp" alt="Nike Air Force 1 Negro/Gris" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike Air Force 1 Negro/Gris</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20Air%20Force%201%20Negro/Gris%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="dunk-low-blanco.webp" alt="Nike SB Dunk Low Blanco" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike SB Dunk Low Blanco</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20SB%20Dunk%20Low%20Blanco%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="dunk-low-verde.webp" alt="Nike SB Dunk Low Verde" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike SB Dunk Low Verde</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20SB%20Dunk%20Low%20Verde%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="af1-menta.webp" alt="Nike Air Force 1 Menta" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike Air Force 1 Menta</h3>
+          <p class="meta">Talles 37/38</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20Air%20Force%201%20Menta%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="af1-azul-marino.webp" alt="Nike Air Force 1 Azul Marino" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike Air Force 1 Azul Marino</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20Air%20Force%201%20Azul%20Marino%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="af1-gris.webp" alt="Nike Air Force 1 Gris" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike Air Force 1 Gris</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.300</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20Air%20Force%201%20Gris%20%E2%80%94%20%24%202.300%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="sb-charge-beige.webp" alt="Nike SB Charge Beige" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike SB Charge Beige</h3>
+          <p class="meta">Talles 41/42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.000</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20SB%20Charge%20Beige%20%E2%80%94%20%24%202.000%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="nike-running-negro.webp" alt="Nike Running Negro" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Nike Running Negro</h3>
+          <p class="meta">Talles 40/41</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.000</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Nike%20Running%20Negro%20%E2%80%94%20%24%202.000%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="adidas-runner-blanco.webp" alt="Adidas Running Blanco" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Adidas Running Blanco</h3>
+          <p class="meta">Talles 42/43</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.000</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Adidas%20Running%20Blanco%20%E2%80%94%20%24%202.000%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="adidas-forum-marron.webp" alt="Adidas Forum Low Marrón" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Adidas Forum Low Marrón</h3>
+          <p class="meta">Talle 42</p>
+          <p class="desc"></p>
+          
+          <div class="pie"><span class="precio">$ 2.000</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Adidas%20Forum%20Low%20Marr%C3%B3n%20%E2%80%94%20%24%202.000%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="sec" id="otros">
+    <div class="wrap">
+      <p class="k">Otros</p>
+      <h2>Otros productos</h2>
+      <p class="p">Lo que no entra en las categorías de arriba, pero se vende igual o más.</p>
+      
+      <div class="grid">
+      <article class="card">
+        <div class="foto"><span class="badge hay">Volvió al stock</span><img src="masajeadora.webp" alt="Pistola Masajeadora" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Pistola Masajeadora</h3>
+          
+          <p class="desc">Cuatro cabezales intercambiables y varias velocidades. Para la espalda, las piernas y la contractura de siempre.</p>
+          
+          <div class="pie"><span class="precio">$ 900</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Pistola%20Masajeadora%20%E2%80%94%20%24%20900%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="termo-stanley.webp" alt="Termo Stanley Digital" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Termo Stanley Digital</h3>
+          <p class="meta">Rosa y negro</p>
+          <p class="desc">Ideal para el café: te lo mantiene caliente durante horas. Con display digital que te marca la temperatura.</p>
+          
+          <div class="pie"><span class="precio">$ 550</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20Termo%20Stanley%20Digital%20%E2%80%94%20%24%20550%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="foto"><img src="maquina-corte.webp" alt="Máquina de Cortar el Pelo" width="900" height="900" loading="lazy"></div>
+        <div class="info">
+          <h3>Máquina de Cortar el Pelo</h3>
+          
+          <p class="desc">Profesional, con peines de distintas medidas, aceite y cepillo. Carga por USB.</p>
+          
+          <div class="pie"><span class="precio">$ 650</span><a class="btn btn-oro" href="https://wa.me/59899576240?text=%C2%A1Hola%21%20%F0%9F%91%8B%20Me%20interesa%20este%20producto%20de%20OnlineShop%20Uy%3A%0A%0A%E2%80%A2%20M%C3%A1quina%20de%20Cortar%20el%20Pelo%20%E2%80%94%20%24%20650%0A%0A%C2%BFSigue%20disponible%3F" target="_blank" rel="noopener">Lo quiero</a></div>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="porque">
+    <div class="wrap">
+      <p class="k">Por qué elegirnos</p>
+      <h2>Comprar acá es simple</h2>
+      <div class="pasos">
+        <div><span>01</span><b>Mirás el precio</b><p>Está escrito en cada producto. No hay que preguntar ni esperar respuesta para saber cuánto sale.</p></div>
+        <div><span>02</span><b>Tocás el botón</b><p>Se abre WhatsApp con el producto ya escrito en el mensaje. Solo apretás enviar.</p></div>
+        <div><span>03</span><b>Coordinamos</b><p>Te confirmamos disponibilidad, forma de pago y entrega. Envíos a todo el país.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Nosotros -->
-  <section class="section" id="nosotros">
-    <div class="container about-grid">
-      <div class="about-copy" data-reveal>
-        <p class="kicker">Nosotros</p>
-        <h2 class="section-title chrome-text">Quiénes somos</h2>
-        <p>TIENDA UY nace para acercarte accesorios de tecnología con estilo, calidad y confianza, sin vueltas. Auriculares, cargadores, fundas y más — producto primera línea, pensado para lo que tu celular usa todos los días.</p>
-        <p>Trabajamos con envíos a todo Uruguay y atención directa por WhatsApp, para que comprar sea simple y rápido — ya sea un producto para vos o varios para tu emprendimiento.</p>
-      </div>
-      <div class="instagram-card" data-reveal>
-        <span class="instagram-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
-        <div>
-          <h3>Seguinos en Instagram</h3>
-          <p>Novedades, lanzamientos y stock disponible: <span class="instagram-handle" data-instagram-handle>@tiendauy__</span></p>
-        </div>
-        <a class="btn btn-ghost" data-instagram href="https://www.instagram.com/tiendauy__" target="_blank" rel="noopener">Ver Instagram →</a>
-      </div>
+  <section class="cierre" id="contacto">
+    <img class="cierre-l" src="logo-mark.png" alt="" width="496" height="354">
+    <div class="wrap">
+      <h2>¿Buscás algo que<br>no está en la lista?</h2>
+      <p>Escribinos y te lo conseguimos. Trabajamos con pedido a demanda: si sabés qué querés, lo traemos.</p>
+      <a class="btn btn-wa btn-g" href="https://wa.me/59899576240?text=%C2%A1Hola!%20%F0%9F%91%8B%20Quiero%20hacer%20una%20consulta%20a%20OnlineShop%20Uy." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.38a9.94 9.94 0 0 0 4.79 1.22c5.5 0 10-4.5 10-10s-4.5-9.84-10.01-9.84Zm5.52 14.15c-.21.58-1.2 1.11-1.68 1.18-.43.06-.98.09-1.58-.1-.36-.12-.83-.27-1.43-.53-2.52-1.09-4.16-3.62-4.29-3.79-.12-.16-1.02-1.35-1.02-2.58s.64-1.83.87-2.08c.23-.25.5-.31.67-.31h.48c.16 0 .36-.06.56.42.2.5.7 1.72.76 1.84.06.13.1.27.02.44-.08.17-.12.27-.25.42-.12.14-.26.33-.37.44-.13.12-.25.25-.11.5.14.25.64 1.07 1.4 1.73.96.85 1.77 1.12 2.02 1.24.25.13.41.11.55-.06.15-.16.63-.72.8-.97.16-.25.33-.21.56-.13.23.09 1.45.69 1.7.81.25.12.42.18.48.29.06.1.06.6-.14 1.18Z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+      <p class="cierre-i">099 576 240 · Uruguay</p>
     </div>
   </section>
-
-  <!-- Contacto -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <div class="contact-panel" data-reveal>
-        <p class="kicker">Contacto</p>
-        <h2 class="contact-title chrome-text">¿Tenés dudas?<br>Escribinos</h2>
-        <p class="contact-copy">Consultanos por stock o precios mayoristas. Te respondemos directo por WhatsApp.</p>
-        <a class="btn btn-wa btn-lg" data-magnetic data-magnetic-strength="0.25" href="https://wa.me/59899576240" data-wa="contact" target="_blank" rel="noopener">
-          <svg class="icon-wa" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-          Escribinos por WhatsApp
-        </a>
-        <div class="contact-meta">
-          <span><svg viewBox="0 0 24 24"><use href="#icon-whatsapp"></use></svg><span data-wa-number>+598 99 576 240</span></span>
-          <a data-instagram href="https://www.instagram.com/tiendauy__" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg><span data-instagram-handle>@tiendauy__</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <a class="brand" href="#top">
-        <img class="brand-logo" src="assets/img/logo.webp" alt="TIENDA UY" width="40" height="40" loading="lazy">
-        <span class="brand-word chrome-text">TIENDA UY</span>
-      </a>
-      <nav class="footer-nav" aria-label="Enlaces del pie">
-        <a href="#top">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#calzado">Calzado</a>
-        <a href="#mayorista">Mayorista</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      <div class="footer-social">
-        <a href="https://wa.me/59899576240" data-wa="general" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" style="fill:currentColor"><use href="#icon-whatsapp"></use></svg></a>
-        <a data-instagram href="https://www.instagram.com/tiendauy__" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#icon-instagram"></use></svg></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Tienda UY. Todos los derechos reservados.</span>
-      <span>Hecho con orgullo en Uruguay 🇺🇾</span>
-    </div>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>OnlineShop Uy · Happy Shopping</span>
+    <span>Calidad, precio y confianza · Envíos a todo Uruguay</span>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/59899576240" data-wa="general" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
-  <span class="wa-float-ring" aria-hidden="true"></span>
-  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-</a>
-
-<script defer src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
-<script defer src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script defer src="lib/manifest.js?v=20260904"></script>
-<script defer src="main.js?v=20260904"></script>
+<script defer src="main.js?v=20260910"></script>
 </body>
 </html>
