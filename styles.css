@@ -298,3 +298,17 @@ section[id],main [id]{scroll-margin-top:86px}
   html{scroll-behavior:auto}
   .btn:hover{transform:none}
 }
+
+/* ── Sector emprendedores ─────────────────────────────────────── */
+.emprende{background:var(--ink-2);border-block:1px solid var(--linea)}
+.emprende h2{margin-bottom:18px}
+.pasos-e{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:40px;
+  background:var(--linea);border:1px solid var(--linea);border-radius:4px;overflow:hidden}
+.paso-e{background:var(--ink);padding:24px 22px}
+.paso-e b{display:block;font-family:var(--disp);font-weight:700;font-size:15.5px;
+  color:var(--oro-claro);margin-bottom:9px;letter-spacing:-.01em}
+.paso-e p{margin:0;font-size:14px;line-height:1.62;color:var(--texto-2)}
+.cta-e{display:flex;align-items:center;flex-wrap:wrap;gap:14px 22px;margin-top:34px}
+.cta-e span{font-size:13.5px;color:var(--texto-3);max-width:38ch}
+@media(max-width:900px){.pasos-e{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pasos-e{grid-template-columns:1fr}}
